@@ -8,8 +8,222 @@
   <title>HTML ACADEMY: Мишка</title>
 </head>
 
-<body>
+<body class="page-body">
+  <header class="header container">
+    <nav class="main-nav">
 
+      <div class="main-nav__logo-container">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Mishka logo">
+        </a>
+
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </div>
+
+      <ul class="main-nav__list main-nav__list--primary-list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--secondary-list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="blank.html">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="blank.html">Корзина: пока пуста</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--extra list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="blank.html">Новые поступления</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="blank.html">Распродажа</a>
+        </li>
+      </ul>
+
+      <p class="main-nav__special-info">Бесплатная доставка по России</p>
+
+    </nav>
+
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-main__title-container">
+      <h1 class="page-main__title container">Вязание на заказ</h1>
+    </div>
+
+    <form class="order" action="https://echo.htmlacademy.ru/" method="POST">
+
+      <p class="order__text">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+        уточнить
+        детали.
+      </p>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--type">
+          <span class="order__fieldset-name order__fieldset-name--type">Тип</span>
+
+          <ul class="order__fieldset-list order__fieldset-list--type">
+            <li class="custom-input">
+              <input class="visually-hidden" type="radio" name="type" id="interior" value="interior" checked>
+              <label class="order__field-name order__custom-input custom-input__label custom-input__label--radio"
+                for="interior">Аксессуар для интерьера</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="radio" name="type" id="toy" value="toy">
+              <label class="order__field-name order__custom-input custom-input__label custom-input__label--radio"
+                for="toy">Детская игрушка</label>
+            </li>
+          </ul>
+
+        </fieldset>
+      </div>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--color">
+          <span class="order__fieldset-name order__fieldset-name--type">Цвет</span>
+
+          <ul class="order__fieldset-list order__fieldset-list--color">
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-white" value="white" checked>
+              <label class="order__field-name order__custom-input custom-input__label custom-input__label--check"
+                for="color-white">Белый</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-gray" value="gray" checked>
+              <label class="order__field-name order__custom-input custom-input__label custom-input__label--check"
+                for="color-white">Серый</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-tiffany" value="tiffany">
+              <label class="order__field-name order__custom-input custom-input__label"
+                for="color-white">«Тиффани»</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-black" value="black">
+              <label class="order__field-name order__custom-input custom-input__label" for="color-white">Черный</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-pink" value="pink">
+              <label class="order__field-name order__custom-input custom-input__label" for="color-white">Розовый</label>
+            </li>
+            <li class="custom-input">
+              <input class="visually-hidden" type="checkbox" name="color" id="color-orange" value="orange">
+              <label class="order__field-name order__custom-input custom-input__label"
+                for="color-white">Оранжевый</label>
+            </li>
+          </ul>
+
+        </fieldset>
+      </div>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--fullname">
+          <span class="order__fieldset-name order__fieldset-name--fullname">ФИО</span>
+
+          <ul class="order__fieldset-list order__fieldset-list--userdata">
+            <li>
+              <label class="order__field-name" for="first-name">Имя:</label>
+              <input class="order__field-user-input" type="text" name="first-name" id="first-name"
+                placeholder="Введите ваше имя*" required>
+            </li>
+            <li>
+              <label class="order__field-name" for="last-name">Фамилия:</label>
+              <input class="order__field-user-input" type="text" name="last-name" id="last-name"
+                placeholder="Укажите фамилию*" required>
+            </li>
+            <li>
+              <label class="order__field-name" for="middle-name">Отчество:</label>
+              <input class="order__field-user-input" type="text" name="middle-name" id="middle-name"
+                placeholder="Отчество, если желаете">
+            </li>
+          </ul>
+
+        </fieldset>
+      </div>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--phone">
+          <span class="order__fieldset-name order__fieldset-name--phone">Тел</span>
+
+          <label for="phone-number">
+            <input class="order__field-user-input order__field-user-input--phone" type="tel" name="phone-number"
+              id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          </label>
+
+        </fieldset>
+      </div>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--email">
+          <span class="order__fieldset-name order__fieldset-name--email">E-mail</span>
+
+          <label for="email">
+            <input class="order__field-user-input order__field-user-input--email" type="email" name="email" id="email"
+              placeholder="Ваш Email*" required>
+          </label>
+
+        </fieldset>
+      </div>
+
+      <div class="order__fieldset-wrapper">
+        <fieldset class="order__fieldset container order__fieldset--comment">
+          <span class="order__fieldset-name order__fieldset-name--comment">Доп</span>
+
+          <label for="comment">
+            <textarea class="order__field-user-input order__field-user-input--textarea" name="comment" id="comment"
+              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </label>
+          
+        </fieldset>
+      </div>
+
+      <footer class="order__footer">
+        <p class="order__note">*Поля обязательны для заполнения</p>
+        <button class="order__submit" type="submit">Отправить заказ</button>
+      </footer>
+    </form>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="page-footer__wrapper container">
+      <h2 class="visually-hidden">Дополнительная информация об интернет-магазине и сайте</h2>
+
+      <ul class="social__list footer__social">
+        <h3 class="visually-hidden">Наши социальные сети</h3>
+
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://instagram.com/">Instagram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
+        </li>
+      </ul>
+
+      <div class="copyright footer__copyright">
+        <h3 class="visually-hidden">Сайт разработан:</h3>
+
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__icon" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
+    </div>
+
+  </footer>
 </body>
 
 </html>
