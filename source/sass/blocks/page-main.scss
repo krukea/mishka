@@ -1,0 +1,20 @@
+.page-main__title {
+  margin: 0 auto;
+}
+
+.page-main__title-container {
+  display: flex;
+  text-align: center;
+
+  height: 177px;
+
+  &--home {
+    height: 282px;
+    padding-top: 73px;
+
+    background-image: url("../img/home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -20px;
+    background-size: 575px auto;
+  }
+}

@@ -1,0 +1,36 @@
+/*
+6. Начните вёрстку вашего проекта с помощью препроцессора:
+    задайте фоновые цвета и фоновые изображения для блоков;
+    параметры текста: шрифты, размеры шрифта, межстрочные расстояния, цвет текста;
+    добавьте внутренние и внешние отступы и обводки для крупных сеточных блоков.
+*/
+
+@charset 'utf-8';
+
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "global";
+@import "blocks/custom-input";
+
+@import "blocks/page";
+@import "blocks/page-main";
+@import "blocks/main-nav";
+
+@import "blocks/popular";
+@import "blocks/features";
+@import "blocks/slider";
+@import "blocks/reviews";
+@import "blocks/review";
+@import "blocks/contacts";
+
+@import "blocks/catalog";
+@import "blocks/catalog-nav";
+@import "blocks/promo";
+
+@import "blocks/order";
+
+@import "blocks/page-footer";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/add-to-cart";

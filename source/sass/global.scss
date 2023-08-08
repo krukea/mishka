@@ -1,0 +1,97 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "OpenSans", sans-serif;
+  color: $basic-black;
+
+  background-color: $basic-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: $mobile-width;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $basic-dark-grey;
+
+  background-color: $basic-white;
+  border: 2px solid $basic-dark-grey;
+
+  transition-duration: 0.1s;
+  transition-property: color, background-color;
+
+  &:hover {
+    color: $basic-white;
+
+    background-color: $basic-dark-grey;
+  }
+
+  &:active {
+    color: $basic-white-30;
+
+    background-color: $basic-dark-grey;
+  }
+}
+
+.title {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+
+  &--hidden {
+    display: none;
+  }
+}

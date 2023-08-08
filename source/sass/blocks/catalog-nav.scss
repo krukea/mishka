@@ -1,0 +1,76 @@
+.catalog-nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.catalog-nav__item {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  min-height: 103px;
+
+  color: $basic-white;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+
+  &:hover {
+    margin-top: -5px;
+    min-height: 108px;
+
+    .catalog-nav__img {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .catalog-nav__img {
+      opacity: 0.3;
+    }
+  }
+
+  &--interior {
+    background-color: $basic-mint-light;
+
+    &:hover,
+    &:active {
+      background-color: $basic-mint-light-darker;
+    }
+
+    .catalog-nav__item-img {
+      margin-right: 6px;
+    }
+  }
+
+  &--toys {
+    background-color: $basic-mint-dark;
+
+    &:hover,
+    &:active {
+      background-color: $basic-mint-dark-darker;
+    }
+
+    .catalog-nav__item-img {
+      margin-right: -3px;
+    }
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 0 calc((100vw - #{$mobile-width}) / 2);
+  }
+}
+
+.catalog-nav__item-link {
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: inherit;
+}
+
+.catalog-nav__item-img {
+  opacity: 0.5;
+}
