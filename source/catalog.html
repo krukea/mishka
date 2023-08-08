@@ -10,17 +10,17 @@
 
 <body class="page-body">
   <header class="header container">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
 
       <div class="main-nav__logo-container">
         <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Mishka logo">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka logo">
         </a>
 
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
       </div>
 
-      <ul class="main-nav__list main-nav__list--primary-list">
+      <ul class="main-nav__list main-nav__list--primary-list list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -29,7 +29,7 @@
         </li>
       </ul>
 
-      <ul class="main-nav__list main-nav__list--secondary-list">
+      <ul class="main-nav__list main-nav__list--secondary-list list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="blank.html">Поиск по сайту</a>
         </li>
@@ -38,7 +38,7 @@
         </li>
       </ul>
 
-      <ul class="main-nav__list main-nav__list--extra list">
+      <ul class="main-nav__list main-nav__list--extra list list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="blank.html">Новые поступления</a>
         </li>
@@ -56,7 +56,7 @@
   <main class="page-main">
 
     <div class="page-main__title-container">
-      <h1 class="page-main__title container">Каталог товаров</h1>
+      <h1 class="page-main__title title container">Каталог товаров</h1>
     </div>
 
     <section class="catalog container">
@@ -138,28 +138,35 @@
     <div class="page-footer__wrapper container">
       <h2 class="visually-hidden">Дополнительная информация об интернет-магазине и сайте</h2>
 
-      <ul class="social__list footer__social">
-        <h3 class="visually-hidden">Наши социальные сети</h3>
+      <a class="page-footer__logo logo">
+        <img class="page-footer__logo-img" src="http://placehold.it/102x35" alt="Логотип Интернет-магазина Мишка"
+          width="102" height="35">
+      </a>
 
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://instagram.com/">Instagram</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
-        </li>
-      </ul>
+      <section class="page-footer__social social">
+        <ul class="social__list footer__social">
+          <h3 class="visually-hidden">Наши социальные сети</h3>
 
-      <div class="copyright footer__copyright">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://instagram.com/">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://facebook.com/">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/">Twitter</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="copyright page-footer__copyright">
         <h3 class="visually-hidden">Сайт разработан:</h3>
 
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__icon" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
         </a>
-      </div>
+      </section>
     </div>
 
   </footer>

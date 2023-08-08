@@ -1,0 +1,72 @@
+.popular {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    margin-top: 35px;
+
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+}
+
+.popular__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular__title {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 25px;
+}
+
+.popular__item-tag {
+  color: $basic-mint-light;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.popular__item-description {
+  @include plain-text;
+
+  padding: 17px 0 28px 0;
+}
+
+.popular__item-properties {
+  @include plain-text(20px);
+
+  width: 100%;
+  margin-bottom: 28px;
+  border-collapse: collapse;
+}
+
+.popular__item-properties tr {
+  padding: 12px 0;
+  border-bottom: 1px solid $decor-light-grey;
+}
+
+.popular__item-property {
+  padding: 10px 0;
+}
+
+.popular__item-image {
+  margin-bottom: 25px;
+}
+
+.popular__item-price {
+  align-self: center;
+  margin-bottom: 25px;
+
+  color: $basic-dark-grey;
+  line-height: 24px;
+  font-weight: bold;
+}
