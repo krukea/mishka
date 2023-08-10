@@ -1,20 +1,8 @@
 .popular {
-  position: relative;
   padding-top: 30px;
   padding-bottom: 40px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 6px;
-    margin-top: 35px;
-
-    background-image: url("../img/zigzag-line-desktop.svg");
-    background-size: contain;
-    background-repeat: repeat-x;
-  }
+  @include zigzag;
 }
 
 .popular__item {

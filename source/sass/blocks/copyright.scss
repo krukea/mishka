@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 27px;
+  min-height: 80px;
+  padding: 20px 0;
+}
+
+.copyright__text {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.copyright__link {
+  line-height: 18px;
+
+  &:hover .copyright__link-icon {
+    color: $basic-mint-dark-darker;
+  }
+
+  &:active .copyright__link-icon {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link-icon {
+  color: $basic-mint-light;
+}

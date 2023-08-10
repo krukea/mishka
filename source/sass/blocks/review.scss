@@ -1,0 +1,15 @@
+.review {
+  margin: 0;
+}
+
+.review__text {
+  @include plain-text(30px);
+
+  margin-bottom: 33px;
+}
+
+.review__author {
+  font-weight: bold;
+  font-style: normal;
+  line-height: 24px;
+}
