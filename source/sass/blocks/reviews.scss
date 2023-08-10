@@ -1,0 +1,15 @@
+.reviews {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  @include zigzag;
+}
+
+.reviews__list {
+  margin-top: 14px;
+  margin-bottom: 38px;
+}
+
+.reviews__write {
+  margin-top: 38px;
+}

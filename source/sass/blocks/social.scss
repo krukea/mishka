@@ -1,0 +1,24 @@
+.social__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+
+  margin: 25px 0;
+}
+
+.social__link {
+  padding: 10px;
+
+  &:hover .socials__item-icon {
+    color: $basic-mint-dark-darker;
+  }
+
+  &:active .socials__item-icon {
+    opacity: 0.3;
+  }
+}
+
+.socials__item-icon {
+  color: $basic-black;
+}

@@ -1,0 +1,19 @@
+.slider__controls {
+  display: flex;
+}
+
+.slider__control {
+  width: 50%;
+  height: 52px;
+
+  background-color: $basic-white;
+  border: 1px solid $decor-light-grey;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
