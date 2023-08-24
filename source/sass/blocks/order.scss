@@ -1,0 +1,132 @@
+.order {
+  margin-bottom: 55px;
+}
+
+.order__text {
+  padding-top: 17px;
+
+  font-size: 13px;
+  color: $basic-dark-grey;
+  line-height: 24px;
+}
+
+.order__fieldset-wrapper {
+  margin-top: 30px;
+}
+
+.order__fieldset {
+  border: none;
+
+  &:not(:last-child) {
+    padding-bottom: 30px;
+  }
+}
+
+.order__fieldset-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px;
+
+  font-weight: bold;
+  line-height: 16px;
+  color: $basic-mint-light;
+  text-transform: uppercase;
+
+  &--email,
+  &--phone {
+    margin-bottom: 0;
+  }
+
+  &--comment {
+    margin-bottom: 22px;
+  }
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: $basic-mint-light;
+    margin-left: 20px;
+  }
+
+  + label {
+    position: relative;
+  }
+}
+
+.order__field-name {
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.order__fieldset-list {
+  &--userdata li:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.order__field-user-input {
+  width: 100%;
+  padding: 17px 0;
+
+  border: 0;
+  border-bottom: 2px solid $basic-dark-grey;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: $basic-dark-grey-30;
+
+  &--textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 17px;
+    font-family: "OpenSans", sans-serif;
+
+    border: 2px solid $basic-dark-grey;
+  }
+
+  &::placeholder {
+    color: $basic-dark-grey-30;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    border-color: $basic-mint-light;
+
+    + .order__contacts-icon {
+      color: $basic-mint-light;
+    }
+  }
+
+  &:focus {
+    color: $basic-dark-grey;
+  }
+}
+
+.order__contacts-icon {
+  position: absolute;
+  right: 2px;
+
+  color: $basic-dark-grey-30;
+
+  &--phone {
+    top: calc(50% - 12px);
+  }
+
+  &--email {
+    top: calc(50% - 10px);
+  }
+}
+
+.order__note {
+  margin-top: 17px;
+
+  color: $basic-dark-grey;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.order__submit {
+  margin-top: 30px;
+}
