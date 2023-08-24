@@ -4,9 +4,12 @@
 
 .page-main__title-container {
   display: flex;
+  align-items: center;
   text-align: center;
 
   height: 177px;
+
+  background-color: $basic-light-grey;
 
   &--home {
     height: 282px;

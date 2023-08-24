@@ -10,7 +10,7 @@
 }
 
 .contacts__icon {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-only-width) {
     display: none;
   }
 }
@@ -44,7 +44,7 @@
 .contacts__map {
   width: 100vw;
   min-height: 454px;
-  margin: 0 -30px;
+  margin: 0 calc(50% - 50vw);
 
   background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
