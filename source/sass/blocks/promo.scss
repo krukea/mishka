@@ -1,0 +1,94 @@
+.promo {
+  padding-top: 20px;
+  padding-bottom: 33px;
+  margin-bottom: 58px;
+
+  border: 1px solid $decor-light-grey;
+
+  &:hover {
+    box-shadow: 0px 6px 10px 0px $basic-black-10;
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0px $basic-black-10;
+  }
+}
+
+.promo__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  padding: 0 34px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-left: 25px;
+  max-width: 130px;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.promo__media {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.promo__video {
+  display: block;
+
+  background-image: url("../img/video-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.promo__video-play {
+  @include size(100px, 76px);
+  padding: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/play.svg");
+  background-repeat: no-repeat;
+
+  transform: translate(-50%, -50%);
+  transition-duration: 0.2s;
+  transition-property: transform, opacity;
+
+  &:hover,
+  &:focus {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.promo__info {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.promo__text {
+  margin: 0;
+
+  color: $basic-dark-grey;
+  font-size: 13px;
+  line-height: 24px;
+
+  @media (max-width: $mobile-only-width) {
+    margin-right: -3px;
+  }
+}
+
+.promo__buy {
+  margin-top: 40px;
+}
