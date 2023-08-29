@@ -19,5 +19,18 @@
     background-repeat: no-repeat;
     background-position: 50% -20px;
     background-size: 575px auto;
+
+    @media (min-width: $tablet-width) {
+      height: 746px;
+      background-image: url("../img/home-desktop.jpg");
+      background-size: 768px auto;
+      padding-top: 97px;
+      background-position-y: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $basic-black-10;
+    margin-top: -70px;
   }
 }
