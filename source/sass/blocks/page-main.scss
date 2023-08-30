@@ -1,10 +1,4 @@
-.page-main__title {
-  margin: 0 auto;
-}
-
 .page-main__title-container {
-  display: flex;
-  align-items: center;
   text-align: center;
 
   height: 177px;
@@ -21,16 +15,23 @@
     background-size: 575px auto;
 
     @media (min-width: $tablet-width) {
-      height: 746px;
+      height: 627px;
       background-image: url("../img/home-desktop.jpg");
       background-size: 768px auto;
-      padding-top: 97px;
+      padding-top: 155px;
       background-position-y: 0;
+
+      border-top: 1px solid $basic-black-10;
+      margin-top: -70px;
     }
   }
+}
+
+.page-main__title {
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    border-top: 1px solid $basic-black-10;
-    margin-top: -70px;
+    font-size: 43px;
+    line-height: 50px;
   }
 }
