@@ -2,12 +2,33 @@
   background-color: $basic-light-grey;
 }
 
+.page-footer__wrapper {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
+}
+
 .page-footer__logo {
   @media (max-width: $mobile-only-width) {
     display: none;
+  }
+
+  img {
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
   }
 }
 
 .page-footer__social {
   border-bottom: 1px solid $decor-dark-grey;
+
+  @media (max-width: $tablet-width) {
+    border: 0;
+  }
 }

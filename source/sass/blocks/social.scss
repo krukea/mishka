@@ -5,6 +5,10 @@
   column-gap: 20px;
 
   margin: 25px 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .social__link {

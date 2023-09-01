@@ -9,11 +9,24 @@
   background-color: $basic-white;
   border: 1px solid $decor-light-grey;
 
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: 26px;
+
+    border: none;
+  }
+
   &:hover {
     opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      padding-right: 37px;
+    }
   }
 }
