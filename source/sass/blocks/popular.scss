@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 132px;
+    padding-top: 54px;
     padding-bottom: 96px;
   }
 }
@@ -30,6 +30,17 @@
 
     grid-template-columns: repeat(2, 146px) 42px repeat(2, 167px);
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      "tag title title . image image"
+      ". description description . image image"
+      ". properties properties . image image"
+      ". price price . image image"
+      ". buy buy . image image";
+
+    grid-template-columns: 175px repeat(2, 146px) 58px repeat(2, 262px);
+  }
 }
 
 .popular__title {
@@ -42,7 +53,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 61px;
     margin-bottom: 35px;
+    margin-right: -100%;
+    z-index: 1;
 
     font-size: 53px;
     line-height: 57px;
@@ -63,6 +77,12 @@
 
     text-align: center;
     line-height: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+    margin-left: 0;
+    padding: 10px 25px;
   }
 }
 
@@ -107,7 +127,9 @@
 }
 
 .popular__item-image {
-  margin-bottom: 25px;
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-area: image;
@@ -116,6 +138,11 @@
     height: 404px;
 
     align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 636px;
   }
 }
 

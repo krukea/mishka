@@ -13,6 +13,7 @@
     grid-template-areas:
       "primary logo secondary"
       "extra . special";
+    grid-template-columns: 1fr 150px 1fr;
   }
 }
 
@@ -31,6 +32,7 @@
 
   @media (min-width: $desktop-width) {
     width: 150px;
+    justify-content: center;
   }
 }
 
@@ -115,6 +117,14 @@
     grid-area: secondary;
 
     flex-direction: row;
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-end;
+    }
+
+    .main-nav__item:last-child .main-nav__item-link-icon {
+      margin-right: 30px;
+    }
   }
 
   &--extra-list {
@@ -126,6 +136,12 @@
 
     @media (min-width: $desktop-width) {
       display: flex;
+    }
+
+    .main-nav__item-link {
+      @media (min-width: $desktop-width) {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -216,7 +232,7 @@
   }
 }
 
-.main-nav__list--primary-list .main-nav__item-link:first-child {
+.main-nav__list--primary-list .main-nav__item:first-child .main-nav__item-link {
   padding-left: 0;
 }
 
@@ -233,7 +249,9 @@
 }
 
 .main-nav__list--extra-list .main-nav__item-link:first-child {
-  padding-right: 0;
+  @media (max-width: $mobile-only-width) {
+    padding-right: 0;
+  }
 }
 
 .main-nav__item-link-icon {

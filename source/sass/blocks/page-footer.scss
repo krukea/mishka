@@ -3,7 +3,7 @@
 }
 
 .page-footer__wrapper {
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,7 +19,7 @@
   }
 
   img {
-    @media (max-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       display: block;
     }
   }
@@ -28,7 +28,7 @@
 .page-footer__social {
   border-bottom: 1px solid $decor-dark-grey;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     border: 0;
   }
 }

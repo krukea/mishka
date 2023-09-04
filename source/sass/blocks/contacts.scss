@@ -44,7 +44,7 @@
   font-size: 14px;
   color: $basic-dark-grey;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: 80px auto;
 
     font-size: inherit;
@@ -78,7 +78,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     background-image: url("../img/map-tablet.jpg");
   }
 }
