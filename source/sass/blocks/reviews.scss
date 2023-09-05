@@ -8,6 +8,11 @@
     padding-top: 43px;
     padding-bottom: 85px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 90px;
+  }
 }
 
 .reviews__wrapper {
@@ -27,6 +32,16 @@
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: 350px 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      ". title write"
+      ". list list";
+    grid-template-columns: 175px 700px 1fr;
+
+    padding-top: 80px;
+    padding-bottom: 96px;
   }
 }
 

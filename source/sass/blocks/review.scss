@@ -13,6 +13,11 @@
 
     font-size: 17px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 35px;
+    margin-bottom: 44px;
+  }
 }
 
 .review__author {
