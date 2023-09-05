@@ -1,15 +1,13 @@
-.page-main__title {
-  margin: 0 auto;
-}
-
 .page-main__title-container {
-  display: flex;
-  align-items: center;
+  height: 177px;
   text-align: center;
 
-  height: 177px;
+  background-color: $bg-light-gray;
 
-  background-color: $basic-light-grey;
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $basic-black-10;
+    margin-top: -70px;
+  }
 
   &--home {
     height: 282px;
@@ -17,7 +15,44 @@
 
     background-image: url("../img/home-mobile.jpg");
     background-repeat: no-repeat;
-    background-position: 50% -20px;
-    background-size: 575px auto;
+    background-position: center -20px;
+
+    @media (max-width: $mobile-only-width) {
+      background-size: 575px auto;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 627px;
+      padding-top: 155px;
+
+      background-image: url("../img/home-tablet.jpg");
+      background-position-y: 0;
+
+      & br {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 158px;
+
+      background-image: url("../img/home-desktop.jpg");
+    }
+  }
+}
+
+.page-main__title {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 800px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }

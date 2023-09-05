@@ -3,13 +3,80 @@
   padding-bottom: 45px;
 
   @include zigzag;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 90px;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "title write"
+      "list list";
+    grid-template-columns: 493px 1fr;
+
+    padding-top: 82px;
+    padding-bottom: 47px;
+
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 350px 457px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      ". title write"
+      ". list list";
+    grid-template-columns: 175px 700px 1fr;
+
+    padding-top: 80px;
+    padding-bottom: 96px;
+  }
 }
 
 .reviews__list {
+  grid-area: list;
+
   margin-top: 14px;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.reviews__title {
+  grid-area: title;
 }
 
 .reviews__write {
+  grid-area: write;
+
   margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    width: 175px;
+  }
+}
+
+.reviews__controls {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 70px;
+    bottom: 67px;
+
+    width: 137px;
+  }
 }

@@ -29,5 +29,13 @@
     background-image: url("../img/zigzag-line-desktop.svg");
     background-size: contain;
     background-repeat: repeat-x;
+
+    @media (min-width: $tablet-width) {
+      height: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 23px;
+    }
   }
 }

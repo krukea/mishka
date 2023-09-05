@@ -3,17 +3,64 @@
   padding-bottom: 40px;
 
   @include zigzag;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 51px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 54px;
+    padding-bottom: 96px;
+  }
 }
 
 .popular__item {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "title title title title tag"
+      "description description . image image"
+      "properties properties . image image"
+      "price price . image image"
+      "buy buy . image image";
+
+    grid-template-columns: repeat(2, 146px) 42px repeat(2, 167px);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      "tag title title . image image"
+      ". description description . image image"
+      ". properties properties . image image"
+      ". price price . image image"
+      ". buy buy . image image";
+
+    grid-template-columns: 175px repeat(2, 146px) 58px repeat(2, 262px);
+  }
 }
 
 .popular__title {
   margin-bottom: 5px;
   text-align: left;
-  font-size: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 61px;
+    margin-bottom: 35px;
+    margin-right: -100%;
+    z-index: 1;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .popular__item-tag {
@@ -21,12 +68,39 @@
   text-transform: uppercase;
   font-weight: bold;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: tag;
+
+    margin-left: 57px;
+    padding: 10px 13px;
+
+    text-align: center;
+    line-height: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+    margin-left: 0;
+    padding: 10px 25px;
+  }
 }
 
 .popular__item-description {
   @include plain-text;
 
-  padding: 17px 0 28px 0;
+  padding-top: 17px;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: description;
+
+    padding-top: 0;
+    padding-bottom: 48px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .popular__item-properties {
@@ -35,6 +109,12 @@
   width: 100%;
   margin-bottom: 28px;
   border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    grid-area: properties;
+
+    margin-bottom: 57px;
+  }
 }
 
 .popular__item-properties tr {
@@ -47,7 +127,23 @@
 }
 
 .popular__item-image {
-  margin-bottom: 25px;
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: image;
+
+    width: 334px;
+    height: 404px;
+
+    align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .popular__item-price {
@@ -57,4 +153,19 @@
   color: $basic-dark-grey;
   line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    grid-area: price;
+
+    margin-bottom: 33px;
+
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.popular__item-buy {
+  @media (min-width: $tablet-width) {
+    grid-area: buy;
+  }
 }

@@ -4,8 +4,13 @@
   justify-content: center;
 
   column-gap: 27px;
-  min-height: 80px;
+  height: 80px;
   padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+    padding: 0;
+  }
 }
 
 .copyright__text {
