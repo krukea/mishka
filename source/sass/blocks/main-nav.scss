@@ -4,6 +4,8 @@
     grid-template-areas:
       "logo secondary"
       "primary special";
+    grid-template-columns: 320px 1fr;
+
     align-items: center;
 
     position: relative;
@@ -228,7 +230,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 20px 30px;
+    padding: 20px 15px;
+
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 

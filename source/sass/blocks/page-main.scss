@@ -1,17 +1,28 @@
 .page-main__title-container {
   height: 177px;
+  padding-top: 73px;
+
   text-align: center;
 
   background-color: $bg-light-gray;
+  background-image: url("../img/zigzag-fill.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
 
   @media (min-width: $tablet-width) {
-    border-top: 1px solid $basic-black-10;
+    height: 238px;
+    padding-top: 100px;
     margin-top: -70px;
+
+    border-top: 1px solid $basic-black-10;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 272px;
   }
 
   &--home {
     height: 282px;
-    padding-top: 73px;
 
     background-image: url("../img/home-mobile.jpg");
     background-repeat: no-repeat;

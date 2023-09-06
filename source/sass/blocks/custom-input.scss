@@ -1,5 +1,11 @@
 .custom-input {
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 24px;
+    }
+  }
 
   input:disabled + .custom-input__label::before {
     border-color: $basic-dark-grey-30;
@@ -37,6 +43,13 @@
       border-left: 2px solid;
       border-bottom: 2px solid;
       border-color: $basic-dark-grey;
+
+      @media (min-width: $tablet-width) {
+        top: 14px;
+        left: 11px;
+
+        @include size(30px, 15px);
+      }
     }
 
     &:hover + .custom-input__label::before {
@@ -65,15 +78,33 @@
 
     transition-duration: 0.2s;
     transition-property: box-shadow, background-color;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 26px;
+
+      background-color: transparent;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 28px;
+    }
   }
 
   &--radio::before {
     @include size(42px);
     border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      @include size(52px);
+    }
   }
 
   &--check::before {
     @include size(38px);
     padding: 10px;
+
+    @media (min-width: $tablet-width) {
+      @include size(52px);
+    }
   }
 }

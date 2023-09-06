@@ -1,17 +1,41 @@
 .order {
   margin-bottom: 55px;
+  padding-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .order__text {
-  padding-top: 17px;
-
   font-size: 13px;
   color: $basic-dark-grey;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 225px;
+  }
 }
 
 .order__fieldset-wrapper {
-  margin-top: 30px;
+  padding-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    &:nth-child(odd) {
+      background-color: $basic-light-grey;
+    }
+  }
 }
 
 .order__fieldset {
@@ -20,17 +44,41 @@
   &:not(:last-child) {
     padding-bottom: 30px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 167px 1fr;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 174px 1fr;
+  }
+
+  &--fullname {
+    padding-top: 66px;
+  }
 }
 
 .order__fieldset-name {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   margin-bottom: 33px;
 
   font-weight: bold;
   line-height: 16px;
   color: $basic-mint-light;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 18px;
+    font-size: 17px;
+  }
 
   &--email,
   &--phone {
@@ -41,12 +89,14 @@
     margin-bottom: 22px;
   }
 
-  &::after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: $basic-mint-light;
-    margin-left: 20px;
+  @media (max-width: $mobile-only-width) {
+    &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background-color: $basic-mint-light;
+      margin-left: 20px;
+    }
   }
 
   + label {
@@ -57,9 +107,36 @@
 .order__field-name {
   line-height: 18px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    margin-right: 24px;
+  }
+
+  &.custom-input__label {
+    @media (min-width: $tablet-width) {
+      margin-right: 64px;
+    }
+  }
 }
 
 .order__fieldset-list {
+  &--color {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--userdata li {
+    display: flex;
+    align-items: center;
+  }
+
   &--userdata li:not(:last-child) {
     margin-bottom: 22px;
   }
@@ -75,6 +152,12 @@
   font-size: 17px;
   line-height: 18px;
   color: $basic-dark-grey-30;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 18px;
+
+    font-size: 19px;
+  }
 
   &--textarea {
     width: 100%;
