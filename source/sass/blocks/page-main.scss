@@ -4,7 +4,7 @@
 
   text-align: center;
 
-  background-color: $bg-light-gray;
+  background-color: $basic-light-grey;
   background-image: url("../img/zigzag-fill.svg");
   background-repeat: repeat-x;
   background-position: bottom;
@@ -24,6 +24,7 @@
   &--home {
     height: 282px;
 
+    background-color: $bg-light-gray;
     background-image: url("../img/home-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center -20px;

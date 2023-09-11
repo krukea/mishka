@@ -144,13 +144,6 @@
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
-    margin-right: 24px;
-  }
-
-  &.custom-input__label {
-    @media (min-width: $tablet-width) {
-      margin-right: 64px;
-    }
   }
 }
 
@@ -164,17 +157,39 @@
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
 
-  &--userdata li {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      align-items: center;
+    .custom-input:nth-child(odd) .custom-input__label {
+      @media (min-width: $tablet-width) {
+        margin-right: 64px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 85px;
+      }
+    }
+
+    .custom-input:not(:nth-child(3n)) .custom-input__label {
+      margin-right: 0;
     }
   }
 
-  &--userdata li:not(:last-child) {
-    margin-bottom: 22px;
+  &--userdata {
+    li {
+      @media (min-width: $tablet-width) {
+        display: flex;
+        align-items: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+
+    .order__field-name {
+      @media (min-width: $tablet-width) {
+        padding-right: 25px;
+      }
+    }
   }
 }
 
