@@ -1,17 +1,49 @@
 .order {
   margin-bottom: 55px;
+  padding-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .order__text {
-  padding-top: 17px;
-
   font-size: 13px;
   color: $basic-dark-grey;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 225px;
+  }
 }
 
 .order__fieldset-wrapper {
-  margin-top: 30px;
+  @media (max-width: $mobile-only-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:nth-child(odd) {
+      background-color: $basic-light-grey;
+    }
+  }
+
+  &:not(:nth-child(2)) .order__fieldset {
+    @media (min-width: $desktop-width) {
+      padding-right: 225px;
+    }
+  }
 }
 
 .order__fieldset {
@@ -20,17 +52,67 @@
   &:not(:last-child) {
     padding-bottom: 30px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 167px 1fr;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 174px 1fr;
+  }
+
+  &--color {
+    @media (min-width: $tablet-width) {
+      padding-bottom: 25px;
+    }
+  }
+
+  &--phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.order__fieldset-inner {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 167px 1fr;
+  }
+
+  &:last-child {
+    padding-top: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+    }
+  }
 }
 
 .order__fieldset-name {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   margin-bottom: 33px;
 
   font-weight: bold;
   line-height: 16px;
   color: $basic-mint-light;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 18px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+  }
 
   &--email,
   &--phone {
@@ -41,12 +123,14 @@
     margin-bottom: 22px;
   }
 
-  &::after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: $basic-mint-light;
-    margin-left: 20px;
+  @media (max-width: $mobile-only-width) {
+    &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background-color: $basic-mint-light;
+      margin-left: 20px;
+    }
   }
 
   + label {
@@ -57,11 +141,55 @@
 .order__field-name {
   line-height: 18px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .order__fieldset-list {
-  &--userdata li:not(:last-child) {
-    margin-bottom: 22px;
+  &--color {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .custom-input:nth-child(odd) .custom-input__label {
+      @media (min-width: $tablet-width) {
+        margin-right: 64px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 85px;
+      }
+    }
+
+    .custom-input:not(:nth-child(3n)) .custom-input__label {
+      margin-right: 0;
+    }
+  }
+
+  &--userdata {
+    li {
+      @media (min-width: $tablet-width) {
+        display: flex;
+        align-items: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+
+    .order__field-name {
+      @media (min-width: $tablet-width) {
+        padding-right: 25px;
+      }
+    }
   }
 }
 
@@ -71,14 +199,22 @@
 
   border: 0;
   border-bottom: 2px solid $basic-dark-grey;
+  background-color: transparent;
 
   font-size: 17px;
   line-height: 18px;
   color: $basic-dark-grey-30;
 
+  @media (min-width: $tablet-width) {
+    padding: 16px 18px;
+
+    font-size: 19px;
+  }
+
   &--textarea {
+    display: block;
     width: 100%;
-    min-height: 140px;
+    min-height: 142px;
     padding: 17px;
     font-family: "OpenSans", sans-serif;
 
@@ -119,14 +255,39 @@
   }
 }
 
+.order__footer {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
+
 .order__note {
   margin-top: 17px;
 
   color: $basic-dark-grey;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .order__submit {
   margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1;
+
+    margin: 0;
+  }
 }
