@@ -43,6 +43,8 @@
     padding-top: 80px;
     padding-bottom: 96px;
   }
+
+  @include elastic-container;
 }
 
 .reviews__list {

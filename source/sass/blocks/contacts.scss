@@ -22,6 +22,8 @@
     padding-top: 70px;
     padding-bottom: 105px;
   }
+
+  @include elastic-container;
 }
 
 .contacts__info {

@@ -39,3 +39,17 @@
     }
   }
 }
+
+@mixin elastic-container {
+  @media (min-width: $tablet-width) {
+    width: 87%;
+    max-width: 910px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+}

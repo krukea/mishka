@@ -11,6 +11,8 @@
     padding-top: 68px;
     padding-bottom: 45px;
   }
+
+  @include elastic-container;
 }
 
 .features__title {

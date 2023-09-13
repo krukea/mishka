@@ -11,6 +11,8 @@
     padding-top: 51px;
     padding-bottom: 58px;
   }
+
+  @include elastic-container;
 }
 
 .page-footer__logo {

@@ -5,7 +5,6 @@
       "logo secondary"
       "primary special";
     grid-template-columns: 320px 1fr;
-
     align-items: center;
 
     position: relative;
@@ -17,6 +16,8 @@
       "extra . special";
     grid-template-columns: 1fr 150px 1fr;
   }
+
+  @include elastic-container;
 }
 
 .main-nav__logo-container {

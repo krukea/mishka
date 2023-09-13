@@ -41,6 +41,8 @@
 
     grid-template-columns: 175px repeat(2, 146px) 58px repeat(2, 262px);
   }
+
+  @include elastic-container;
 }
 
 .popular__title {
