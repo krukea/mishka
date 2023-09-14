@@ -158,12 +158,6 @@
     @media (min-width: $desktop-width) {
       display: flex;
     }
-
-    .main-nav__item-link {
-      @media (min-width: $desktop-width) {
-        padding-left: 0;
-      }
-    }
   }
 }
 
@@ -288,9 +282,15 @@
   }
 }
 
-.main-nav__list--extra-list .main-nav__item-link:first-child {
-  @media (max-width: $mobile-only-width) {
-    padding-right: 0;
+.main-nav__list--extra-list .main-nav__item:first-child .main-nav__item-link {
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.main-nav__list--extra-list .main-nav__item:last-child .main-nav__item-link {
+  @media (min-width: $desktop-width) {
+    padding-left: 22px;
   }
 }
 
