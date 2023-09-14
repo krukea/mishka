@@ -49,11 +49,11 @@ exports.html = html;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.mozjpeg({ quality: 85, progressive: true }),
-        imagemin.svgo()
+        //imagemin.svgo()
       ])
     )
     .pipe(gulp.dest("source/img"))
@@ -75,14 +75,14 @@ exports.generateWebp = generateWebp;
 
 // Sprite
 
-const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
+//const sprite = () => {
+//  return gulp.src("source/img/**/icon-*.svg")
+//    .pipe(svgstore())
+//    .pipe(rename("sprite.svg"))
+//    .pipe(gulp.dest("build/img"))
+//}
 
-exports.sprite = sprite;
+//exports.sprite = sprite;
 
 //JS
 
@@ -153,7 +153,7 @@ const build = gulp.series(
   generateWebp,
   images,
   copy,
-  sprite,
+  //sprite,
   styles,
   html,
   js
