@@ -14,14 +14,29 @@
 }
 
 .page-footer__logo {
+  color: $basic-black;
   @media (max-width: $mobile-only-width) {
     display: none;
   }
 
-  img {
-    @media (min-width: $tablet-width) {
-      display: block;
+  &:hover,
+  &:focus {
+    .page-footer__logo-pic {
+      color: $basic-mint-dark-darker;
     }
+  }
+
+  &:active {
+    .page-footer__logo-pic {
+      color: $basic-mint-dark-darker;
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__logo-pic {
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
